@@ -1,12 +1,11 @@
 #!/bin/sh
 
-# Baixando o multilibs current
-cd /home/backup
+# Baixando o multilibs 14.2
+cd /home/backup/multilibs
 lftp -c 'open http://www.slackware.com/~alien/multilib/ ; mirror -c -e 14.2'
-mv 14.2 multilibs
 
 # Removendo o desnecessário (XAP)
-cd multilibs/slackware64-compat32
+cd 14.2/slackware64-compat32
 rm -rf xap-compat32
 cd ..
 
